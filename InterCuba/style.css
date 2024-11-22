@@ -45,9 +45,9 @@ h1 {
   justify-items: center; /* Centra los cuadros */
   align-items: center;
   margin-top: 50px; /* Separación debajo del título */
-  padding: 20px; /* Espaciado interno para mejor visibilidad */
-  margin-left: 10px; /* Menos espacio en los laterales */
-  margin-right: 10px; /* Menos espacio en los laterales */
+  padding: 10px; /* Espaciado interno para mejor visibilidad */
+  margin-left: 0px; /* Menos espacio en los laterales */
+  margin-right: 0px; /* Menos espacio en los laterales */
   max-width: 100%; /* Asegura que el contenedor no se desborde */
 }
 
