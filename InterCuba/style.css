@@ -44,11 +44,14 @@ body {
     justify-items: center; /* Centra los cuadros */
     align-items: center;
     margin-top: 50px; /* Separación debajo del título */
+    padding: 20px; /* Espaciado interno para mejor visibilidad */
+    margin-left: 20px; /* Espacio en el lado izquierdo */
+    margin-right: 20px; /* Espacio en el lado derecho */
   }
   
   /* Cuadro de ruta */
   .ruta-card {
-    background-color: #ff3b3b;
+    background-color: rgba(255, 59, 59, 0.8); /* Fondo semitransparente para que contraste con el fondo */
     border: 2px solid white;
     border-radius: 10px;
     width: 220px;
@@ -61,6 +64,7 @@ body {
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para animación */
     cursor: pointer; /* Cambia el cursor a una mano */
+    margin: 15px; /* Márgenes alrededor de cada cuadro */
   }
 
   .ruta-card:hover {
