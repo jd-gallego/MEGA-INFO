@@ -5,6 +5,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;
   text-align: center;
+  overflow-x: hidden; /* Previene el desbordamiento horizontal */
 }
 
 /* Fondo dinámico para diferentes orientaciones */
@@ -39,69 +40,100 @@ h1 {
 /* Contenedor de las rutas */
 #rutas-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columnas por defecto */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajusta el número de columnas según el tamaño de los cuadros */
   gap: 20px; /* Espaciado entre cuadros */
   justify-items: center; /* Centra los cuadros */
   align-items: center;
-  margin-top: 50px; /* Separación debajo del título */
-  padding: 20px; /* Espaciado interno para mejor visibilidad */
-  margin-left: 20px; /* Espacio en el lado izquierdo */
-  margin-right: 20px; /* Espacio en el lado derecho */
+  margin: 50px auto; /* Centra horizontalmente y separa del título */
+  max-width: 90%; /* Limita el ancho para pantallas más grandes */
+  padding: 10px; /* Espaciado interno */
 }
 
 /* Cuadro de ruta */
 .ruta-card {
-  background-color: rgba(255, 59, 59, 0.8); /* Fondo semitransparente para que contraste con el fondo */
+  background-color: rgba(255, 59, 59, 0.8); /* Fondo semitransparente */
   border: 2px solid white;
   border-radius: 10px;
-  width: 220px;
-  height: 220px;
+  width: 175px; /* Tamaño estándar */
+  height: 175px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para animación */
-  cursor: pointer; /* Cambia el cursor a una mano */
-  margin: 15px; /* Márgenes alrededor de cada cuadro */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto de animación */
+  cursor: pointer;
 }
 
 .ruta-card:hover {
-  transform: scale(1.1); /* Efecto de agrandar el cuadro */
+  transform: scale(1.1); /* Efecto al pasar el cursor */
   box-shadow: 0 8px 15px rgba(4, 255, 0, 0.979); /* Más sombra al hacer hover */
 }
 
+
 .ruta-card img {
-  width: 100px; /* Tamaño de imagen ajustado */
+  width: 80px; /* Tamaño de imagen ajustado */
   margin-bottom: 10px;
 }
 
 .ruta-card h2 {
   margin: 0;
-  font-size: 30px; /* Fuente más grande */
+  font-size: 25px; /* Fuente ajustada */
 }
 
 .ruta-card p {
   margin: 0;
-  font-size: 20px;
+  font-size: 18px; /* Fuente más pequeña */
 }
 
 /* Responsividad */
-@media (max-width: 1200px) {
-  #rutas-container {
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas para pantallas medianas */
-  }
-}
-
 @media (max-width: 768px) {
   #rutas-container {
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas para pantallas pequeñas */
+    gap: 15px; /* Reducir el espacio entre tarjetas */
+  }
+
+  .ruta-card {
+    width: 160px;
+    height: 160px;
+  }
+
+  .ruta-card img {
+    width: 70px;
+  }
+
+  .ruta-card h2 {
+    font-size: 24px;
+  }
+
+  .ruta-card p {
+    font-size: 20px;
   }
 }
 
 @media (max-width: 480px) {
   #rutas-container {
-    grid-template-columns: repeat(2, 1fr); /* También 2 columnas para celulares */
+    gap: 10px;
+  }
+
+  .ruta-card {
+    width: 140px;
+    height: 140px;
+  }
+
+  .ruta-card img {
+    width: 60px;
+  }
+
+  .ruta-card h2 {
+    font-size: 20px;
+  }
+
+  .ruta-card p {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 18px; /* Reducir tamaño del título */
   }
 }
