@@ -64,7 +64,6 @@ body {
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para animación */
     cursor: pointer; /* Cambia el cursor a una mano */
-    margin: 15px; /* Márgenes alrededor de cada cuadro */
   }
 
   .ruta-card:hover {
