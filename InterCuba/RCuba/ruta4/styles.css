@@ -48,6 +48,7 @@ body {
 }
 
 /* Contenedor de las listas y mapa */
+/* Contenedor principal (vista horizontal por defecto) */
 .content {
     display: flex;
     justify-content: space-between;
@@ -55,14 +56,14 @@ body {
     border-radius: 10px;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0); /* Fondo transparente */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ligera */
-    max-width: 80%; /* Ajustar ancho del cuadro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    max-width: 80%; /* Ajustar ancho */
     margin: 20px auto; /* Centrar horizontalmente */
 }
 
 /* Columnas de listas */
 .column {
-    width: 60%; /* Espacio suficiente para las listas */
+    width: 45%; /* Ancho de cada columna */
 }
 
 .column h3 {
@@ -100,7 +101,7 @@ ul li:before {
     margin-left: 20px; /* Espaciado entre mapa y listas */
 }
 
-/* Estilo de la imagen del mapa */
+/* Imagen del mapa con efecto */
 .map img {
     width: 100%;
     border-radius: 10px;
@@ -108,10 +109,31 @@ ul li:before {
     cursor: pointer;
 }
 
-/* Efecto al pasar el cursor sobre la imagen */
 .map img:hover {
     transform: scale(1.1); /* Agrandar la imagen */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Sombra más grande */
+}
+
+/* RESPONSIVIDAD: Ajuste para pantallas pequeñas */
+@media (max-width: 650px) {
+    .content {
+        flex-direction: column; /* Cambiar a disposición vertical */
+        align-items: center; /* Centrar elementos */
+    }
+
+    .column {
+        width: 100%; /* Ocupan todo el ancho */
+        margin-bottom: 20px; /* Espaciado entre las columnas */
+    }
+
+    .map {
+        width: 100%; /* Ancho completo */
+        margin: 0; /* Quitar margen izquierdo */
+    }
+
+    .map img {
+        max-width: 90%; /* Ligeramente más pequeño para centrarlo bien */
+    }
 }
 
 h3 {

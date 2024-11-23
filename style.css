@@ -1,38 +1,51 @@
 /* General */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: white;
-    text-align: center;
-  }
-
-  /* Fondo dinámico para diferentes orientaciones */
-  body {
-    background-size: cover; /* Hace que la imagen cubra toda la pantalla */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-attachment: fixed; /* Fija la imagen de fondo */
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  text-align: center;
+  height: 100vh; /* Asegura que el cuerpo cubra toda la altura de la ventana */
+  display: flex;
+  justify-content: center; /* Centra horizontalmente el contenido principal */
+  align-items: center; /* Centra verticalmente el contenido principal */
 }
-  
-  /* Imagen de fondo para orientación horizontal */
-  @media (orientation: landscape) {
-    body {
+
+/* Fondo dinámico para diferentes orientaciones */
+body {
+  background-size: cover; /* Hace que la imagen cubra toda la pantalla */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-attachment: fixed; /* Fija la imagen de fondo */
+}
+
+/* Imagen de fondo para orientación horizontal */
+@media (orientation: landscape) {
+  body {
       background-image: url('imagenes/fondoH.png'); /* Ruta de la imagen para horizontal */
-    }
   }
-  
-  /* Imagen de fondo para orientación vertical */
-  @media (orientation: portrait) {
-    body {
+}
+
+/* Imagen de fondo para orientación vertical */
+@media (orientation: portrait) {
+  body {
       background-image: url('imagenes/fondoV.png'); /* Ruta de la imagen para vertical */
-    }
   }
+}
 
 .container {
   display: flex;
+  flex-direction: column; /* Apila el título y los botones verticalmente */
   justify-content: center;
   align-items: center;
+  width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+  height: 100%; /* Asegura que el contenedor ocupe toda la altura */
+}
+
+h1 {
+  color: white; /* Título en blanco */
+  font-size: 50px;
+  margin-bottom: 50px; /* Incrementa la separación del título con los botones */
 }
 
 .botones {
@@ -41,29 +54,24 @@ body {
   align-items: center;
 }
 
-h1 {
-    color: white; /* Título en blanco */
-    font-size: 50px;
-}
-
 .btn {
-    background-color: white;
-    color: black;
-    font-family: fantasy;
-    padding: 20px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: block;
-    margin: 50px auto;
-    font-size: 30px;
-    border-radius: 50px;
-    border-inline: 0;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-    width: 400px; /* Aquí se establece el ancho de los botones */
+  background-color: white;
+  color: black;
+  font-family: fantasy;
+  padding: 20px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  margin: 20px auto; /* Espaciado uniforme entre botones */
+  font-size: 30px;
+  border-radius: 50px;
+  border-inline: 0;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  width: 400px; /* Aquí se establece el ancho de los botones */
 }
 
 .btn:hover {
-    transform: scale(1.1);
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
 }

@@ -51,7 +51,7 @@ h1 {
 
 /* Cuadro de ruta */
 .ruta-card {
-  background-color: rgba(255, 59, 59, 0.8); /* Fondo semitransparente */
+  background-color: #7A0000; /* Fondo semitransparente */
   border: 2px solid white;
   border-radius: 10px;
   width: 175px; /* Tamaño estándar */
