@@ -1,0 +1,57 @@
+/* General */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #7A0000;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 96%;
+    margin: 0 auto 20px;
+    color: black;
+}
+
+.header .text {
+    display: flex;
+    flex-direction: column;
+}
+
+.header h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.header h2 {
+    font-size: 1.5rem;
+    margin: 5px 0 0 0;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+/* Content (cuadro vacío con borde) */
+.content {
+    border: 2px solid white; /* Borde blanco */
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0); /* Fondo transparente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    max-width: 70%; /* Ajustar el tamaño del cuadro */
+    margin: 20px auto; /* Centrar horizontalmente */
+}
