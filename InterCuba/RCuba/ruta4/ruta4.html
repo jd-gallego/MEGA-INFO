@@ -1,29 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ruta #4 - Altagracia</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Ruta #4 - Altagracia</h1>
-
-    <table class="ruta">
-        <thead>
-            <tr>
-                <th>Salida</th>
-                <th>Regreso</th>
-                <th>Ruta en tiempo real</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Intercambiador Cuba</td>
-                <td>Escuela María Cristina</td>
-                <td rowspan="16"><img src="mapa.png" alt="Mapa de la ruta"></td>
-            </tr>
-            </tbody>
-    </table>
-
-    <script src="script.js"></script>
+    <div class="container">
+        <div class="header">
+            <div class="text">
+                <h1>RUTA #4</h1>
+                <h2>ALTAGRACIA</h2>
+            </div>
+            <img src="logo.png" alt="Logo de la ruta" class="logo">
+        </div>
+        <div class="content">
+            <div class="column">
+                <h3>SALIDA</h3>
+                <ul>
+                    <li>Intercambiador Cuba</li>
+                    <li>Clínica San Rafael</li>
+                    <li>Colegio Alfonso Jaramillo</li>
+                    <li>Glorieta corales</li>
+                    <li>Hospital San Joaquín</li>
+                    <li>Relleno Sanitario</li>
+                    <li>Barrio San Joaquín</li>
+                    <li>Hacienda Guadalcanal</li>
+                    <li>Villa de Leyva</li>
+                    <li>Filo Bonito</li>
+                    <li>Escuela María Cristina, corregimiento de Altagracia</li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3>REGRESO</h3>
+                <ul>
+                    <li>Escuela María Cristina, corregimiento de Altagracia</li>
+                    <li>Filo Bonito</li>
+                    <li>Villa de Leyva</li>
+                    <li>Hacienda Guadalcanal</li>
+                    <li>Barrio San Joaquín</li>
+                    <li>Intersección con la vía hacia Morelia</li>
+                    <li>Relleno Sanitario</li>
+                    <li>Hospital San Joaquín</li>
+                    <li>Glorieta corales</li>
+                    <li>Clínica San Rafael</li>
+                    <li>Intercambiador Cuba</li>
+                </ul>
+            </div>
+            <div class="map">
+                <h3>MAPA DE RECORRIDO</h3>
+                <h6>CLICK AL MAPA PARA MAS DETALLES</h6>
+                <a href="infomapa/mapa.html">
+                    <img src="mapa.png" alt="Mapa de la ruta">
+                </a>
+            </div>
+        </div>
 </body>
 </html>
