@@ -16,45 +16,49 @@
             </div>
             <img src="logo.png" alt="Logo de la ruta" class="logo">
         </div>
-        <div class="content">
-            <div class="column">
-                <h3>SALIDA</h3>
-                <ul>
-                    <li>Intercambiador Cuba</li>
-                    <li>Colegio Alfonso Jaramillo</li>
-                    <li>Glorieta corales</li>
-                    <li>Hospital San Joaquín</li>
-                    <li>Entrada Altavista</li>
-                    <li>Barrio San Joaquín</li>
-                    <li>Calle el recreo-puertas de alcala</li>
-                    <li>Entrada barrio el recreo</li>
-                    <li>Barrio el recreo</li>
-                </ul>
-            </div>
-            <div class="column">
-                <h3>REGRESO</h3>
-                <ul>
-                    <li>Salida barrio el recreo</li>
-                    <li>ENTRADA BARRIO SAN MARCOS-PORTAL DE SAN JOAQUIN</li>
-                    <li>BARRIO SAN MARCOS - PORTAL DE SAN JOAQUIN</li>
-                    <li>ENTRADA BARRIO TINAJAS</li>
-                    <li>BARRIO TINAJAS</li>
-                    <li>ENTRADA BARRIO BIRMANIA</li>
-                    <li>COLEGIO SAN JOAQUIN</li>
-                    <li>IGLESIA SAN JOAQUIN</li>
-                    <li>ENTRADA ALTAVISTA</li>
-                    <li>Hospital San Joaquín</li>
-                    <li>Clínica San Rafael</li>
-                    <li>Intercambiador Cuba</li>
-                </ul>
-            </div>
-            <div class="map">
-                <h3>MAPA DE RECORRIDO</h3>
-                <h6>CLICK AL MAPA PARA MAS DETALLES</h6>
-                <a href="infomapa/mapa.html">
-                    <img src="mapa.png" alt="Mapa de la ruta">
-                </a>
+        <div class="content-wrapper">
+            <div class="content">
+                <!-- Tabla de horarios de salida -->
+                <table id="tabla-salida" class="tabla-horarios">
+                    <thead>
+                        <tr>
+                            <th colspan="3">HORARIO DE SALIDA INTERCAMBIADOR</th>
+                        </tr>
+                        <tr>
+                            <th>MAÑANA</th>
+                            <th>TARDE</th>
+                            <th>NOCHE</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+        
+                <!-- Tabla de horarios de llegada -->
+                <table id="tabla-llegada" class="tabla-horarios">
+                    <thead>
+                        <tr>
+                            <th colspan="3">HORARIO DE LLEGADA BARRIO</th>
+                        </tr>
+                        <tr>
+                            <th>MAÑANA</th>
+                            <th>TARDE</th>
+                            <th>NOCHE</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+        
+                <!-- Mapa -->
+                <div class="map">
+                    <h3>MAPA DE RECORRIDO</h3>
+                    <h6>CLICK AL MAPA PARA MÁS DETALLES</h6>
+                    <a href="infomapa/mapa.html">
+                        <img src="mapa.png" alt="Mapa de la ruta">
+                    </a>
+                </div>
             </div>
         </div>
+    </div>
+    <script src="app.js"></script>
 </body>
 </html>
