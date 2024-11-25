@@ -67,11 +67,21 @@ body {
     align-items: flex-start;
 }
 
+.columna {
+    width: 30%; /* Cada columna ocupa un tercio del ancho */
+}
+
+.mapa-alarmas {
+    display: flex;
+    flex-direction: column; /* Alinear el mapa y alarmas verticalmente */
+    gap: 20px; /* Espacio entre el mapa y las alarmas */
+}
+
 /* Tablas */
 .tabla-horarios {
-    width: 30%; /* Reducir ancho de las tablas */
+    width: 100%; /* Ocupa el ancho completo de la columna */
     border-collapse: collapse;
-    margin: 0;
+    margin: 0 auto;
     color: white;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.5);
@@ -104,12 +114,11 @@ body {
 
 /* Mapa */
 .map {
-    width: 30%; /* Ajustar ancho del mapa */
     text-align: center;
 }
 
 .map img {
-    width: 100%;
+    width: 100%; /* Ajustar el ancho del mapa al 100% */
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
@@ -120,13 +129,51 @@ body {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Sombra más grande */
 }
 
+/* Cuadro de alarmas activas */
+.cuadro-alarmas {
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cuadro-alarmas h3 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.cuadro-alarmas ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cuadro-alarmas li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.cuadro-alarmas button {
+    background-color: #7A0000;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cuadro-alarmas button:hover {
+    background-color: #B80000;
+}
+
 /* Responsividad */
 @media (max-width: 650px) {
-    .header {
-        flex-direction: column;
-        text-align: center;
-    }
-
     .logo {
         margin-top: 10px;
     }
@@ -136,9 +183,8 @@ body {
         align-items: center;
     }
 
-    .tabla-horarios,
-    .map {
-        width: 100%; /* Tablas y mapa ocupan todo el ancho en móviles */
+    .columna {
+        width: 100%; /* Cada columna ocupa el 100% del ancho en dispositivos pequeños */
         margin-bottom: 20px;
     }
 

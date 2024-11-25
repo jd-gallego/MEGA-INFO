@@ -18,43 +18,53 @@
         </div>
         <div class="content-wrapper">
             <div class="content">
-                <!-- Tabla de horarios de salida -->
-                <table id="tabla-salida" class="tabla-horarios">
-                    <thead>
-                        <tr>
-                            <th colspan="3">HORARIO DE SALIDA INTERCAMBIADOR</th>
-                        </tr>
-                        <tr>
-                            <th>MAÑANA</th>
-                            <th>TARDE</th>
-                            <th>NOCHE</th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
+                <!-- Primera columna -->
+                <div class="columna">
+                    <table id="tabla-salida" class="tabla-horarios">
+                        <thead>
+                            <tr>
+                                <th colspan="3">HORARIO DE SALIDA INTERCAMBIADOR</th>
+                            </tr>
+                            <tr>
+                                <th>MAÑANA</th>
+                                <th>TARDE</th>
+                                <th>NOCHE</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
         
-                <!-- Tabla de horarios de llegada -->
-                <table id="tabla-llegada" class="tabla-horarios">
-                    <thead>
-                        <tr>
-                            <th colspan="3">HORARIO DE LLEGADA BARRIO</th>
-                        </tr>
-                        <tr>
-                            <th>MAÑANA</th>
-                            <th>TARDE</th>
-                            <th>NOCHE</th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
+                <!-- Segunda columna -->
+                <div class="columna">
+                    <table id="tabla-llegada" class="tabla-horarios">
+                        <thead>
+                            <tr>
+                                <th colspan="3">HORARIO DE LLEGADA BARRIO</th>
+                            </tr>
+                            <tr>
+                                <th>MAÑANA</th>
+                                <th>TARDE</th>
+                                <th>NOCHE</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
         
-                <!-- Mapa -->
-                <div class="map">
-                    <h3>MAPA DE RECORRIDO</h3>
-                    <h6>CLICK AL MAPA PARA MÁS DETALLES</h6>
-                    <a href="infomapa/mapa.html">
-                        <img src="mapa.png" alt="Mapa de la ruta">
-                    </a>
+                <!-- Tercera columna -->
+                <div class="columna mapa-alarmas">
+                    <div class="map">
+                        <h3>MAPA DE RECORRIDO</h3>
+                        <h6>CLICK AL MAPA PARA MÁS DETALLES</h6>
+                        <a href="infomapa/mapa.html">
+                            <img src="mapa.png" alt="Mapa de la ruta">
+                        </a>
+                    </div>
+                    <div id="alarmas-activas" class="cuadro-alarmas">
+                        <h3>Alarmas Activas</h3>
+                        <ul id="lista-alarmas"></ul>
+                    </div>
                 </div>
             </div>
         </div>
